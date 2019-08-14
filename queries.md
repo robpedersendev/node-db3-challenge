@@ -43,3 +43,9 @@ on e.Employeeid = e.Employeeid
 
 
 ### (Stretch) Display OrderID and a  column called ItemCount that shows the total number of products placed on the order. Shows 196 records. 
+SELECT orderdetails.orderid, 
+count(orders.orderid) as 'Item Count' 
+FROM OrderDetails 
+join orders 
+on orderdetails.orderid = orders.orderid group by orderdetails.orderid
+on e.Employeeid = e.Employeeid
