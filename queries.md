@@ -7,6 +7,11 @@ JOIN Categories as c
 ON c.CategoryId = p.CategoryId
 
 ### Display the OrderID and ShipperName for all orders placed before January 9, 1997. Shows 161 records.
+SELECT o.OrderID, o.OrderDate, s.ShipperName 
+FROM Orders as o 
+left join Shippers as s 
+on o.ShipperID = s.ShipperID where o.OrderDate < '1997-01-09' order by o.OrderDate
+
 
 ### Display all ProductNames and Quantities placed on order 10251. Sort by ProductName. Shows 3 records.
 
