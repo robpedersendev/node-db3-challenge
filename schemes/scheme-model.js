@@ -29,3 +29,8 @@ function remove(id) {
         .where({ id })
         .del()
 }
+
+function addStep({ instructions, step_number }, id) {
+    return db('steps')
+        .insert({ instructions, step_number, scheme_id: id })
+}
