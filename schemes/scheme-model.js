@@ -1,4 +1,14 @@
+const db = require('../dbConfig')
 
+module.exports = {
+    find,
+    findById,
+    findSteps,
+    add,
+    update,
+    remove,
+    addStep
+}
 
 function find(){
     return db('schemes')
