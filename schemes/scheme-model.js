@@ -23,3 +23,9 @@ function update({ scheme_name }, id) {
         .where({ id })
         .update({ scheme_name })
 }
+
+function remove(id) {
+    return db('schemes')
+        .where({ id })
+        .del()
+}
